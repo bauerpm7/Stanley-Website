@@ -10,8 +10,6 @@ const List = styled.ul`
     content: '';
     flex: 0 0 32%;
   }
-  @media (max-width: 800px) {
-    flex-direction: column;
   }
 `
 
