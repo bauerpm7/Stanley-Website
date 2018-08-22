@@ -3,13 +3,23 @@ import CardList from '../components/CardList'
 import Card from '../components/Card'
 import Container from '../components/Container'
 import SEO from '../components/SEO'
+import Hero from '../components/Hero'
 
 const Index = ({ data }) => {
   const posts = data.allContentfulPost.edges
-
+  const image = data.contentfulCoverImage.image
+  const heroTitle = data.contentfulCoverImage.title
+  const subtitle = data.contentfulCoverImage.subtitle
   return (
     <div>
       <SEO />
+      <Container style = {{padding: 0}}>
+      <Hero
+        image = {image}
+        title = {heroTitle}
+        subtitle = {subtitle}
+      />
+      </Container>
       <Container>
         <CardList>
           {posts.map(({ node: post }) => (
@@ -31,7 +41,7 @@ const Index = ({ data }) => {
 export const query = graphql`
   query indexQuery {
     allContentfulPost(
-      limit: 1000
+      limit: 3
       sort: { fields: [publishDate], order: DESC }
     ) {
       edges {
@@ -52,6 +62,16 @@ export const query = graphql`
               excerpt(pruneLength: 80)
             }
           }
+        }
+      }
+    }
+    contentfulCoverImage {
+      title
+      subtitle
+      image {
+        sizes {
+          aspectRatio
+          srcSet
         }
       }
     }
