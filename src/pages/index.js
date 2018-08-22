@@ -4,6 +4,7 @@ import Card from '../components/Card'
 import Container from '../components/Container'
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
+import HeroContainer from '../components/HeroContainer'
 
 const Index = ({ data }) => {
   const posts = data.allContentfulPost.edges
@@ -13,13 +14,13 @@ const Index = ({ data }) => {
   return (
     <div>
       <SEO />
-      <Container style = {{padding: 0}}>
+      <HeroContainer>
       <Hero
         image = {image}
         title = {heroTitle}
         subtitle = {subtitle}
       />
-      </Container>
+      </HeroContainer>
       <Container>
         <CardList>
           {posts.map(({ node: post }) => (
