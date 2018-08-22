@@ -13,7 +13,7 @@ const BgImg = styled(Img)`
   width: 100%;
   z-index: -1;
   min-height: 300px;
-  height: auto;
+  max-height: 600px;
   @media (min-width: ${props => props.theme.responsive.small}) {
     height: ${props => props.height || 'auto'};
   }
@@ -48,6 +48,26 @@ const Title = styled.h1`
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
+  @media (max-width: 600px) {
+    font-size: 2em;
+  }
+`
+const SubTitle = styled.h2`
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight: 600;
+  position: absolute;
+  width: 100%;
+  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  padding: 0 1rem;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  @media (max-width: 600px) {
+    font-size: 1.3em;
+  }
 `
 
 const Hero = props => (
@@ -58,6 +78,7 @@ const Hero = props => (
       backgroundColor={'#eeeeee'}
     />
     <Title>{props.title}</Title>
+    <SubTitle>{props.subtitle}</SubTitle>
   </Wrapper>
 )
 
