@@ -23,6 +23,7 @@ const Index = ({ data }) => {
       />
       </HeroContainer>
       <Container>
+        <PageTitle>Recent Posts</PageTitle>
         <CardList>
           {posts.map(({ node: post }) => (
             <Card
