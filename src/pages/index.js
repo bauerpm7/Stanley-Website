@@ -5,6 +5,7 @@ import Container from '../components/Container'
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
 import HeroContainer from '../components/HeroContainer'
+import PageTitle from '../components/PageTitle'
 
 const Index = ({ data }) => {
   const posts = data.allContentfulPost.edges
@@ -22,6 +23,7 @@ const Index = ({ data }) => {
       />
       </HeroContainer>
       <Container>
+        <PageTitle>Recent Posts</PageTitle>
         <CardList>
           {posts.map(({ node: post }) => (
             <Card
