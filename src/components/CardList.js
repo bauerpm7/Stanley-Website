@@ -9,10 +9,17 @@ const List = styled.ul`
     content: '';
     flex: 0 0 32%;
   }
+<<<<<<< HEAD
   @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
   }
+||||||| merged common ancestors
+=======
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+>>>>>>> c054abf5859d3d6c3fb29ce5f7f075ed88ccea51
 `
 
 const CardList = props => {
