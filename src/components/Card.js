@@ -8,6 +8,7 @@ const Post = styled.li`
   border-radius: 2px;
   margin: 0 0 1em 0;
   width: 100%;
+  max-width: 500px;
   transition: background 0.2s;
   @media screen and (min-width: ${props => props.theme.responsive.small}) {
     flex: 0 0 49%;

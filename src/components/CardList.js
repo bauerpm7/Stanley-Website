@@ -5,10 +5,13 @@ const List = styled.ul`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  margin: 0 auto;
   &::after {
     content: '';
     flex: 0 0 32%;
+  }
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
   }
 `
 
