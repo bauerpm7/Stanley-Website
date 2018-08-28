@@ -6,6 +6,7 @@ import SEO from '../components/SEO'
 import Hero from '../components/Hero'
 import HeroContainer from '../components/HeroContainer'
 import PageTitle from '../components/PageTitle'
+import SideNavigation from '../components/SideNavigation'
 
 const Index = ({ data }) => {
   const posts = data.allContentfulPost.edges
@@ -15,14 +16,30 @@ const Index = ({ data }) => {
   return (
     <div>
       <SEO />
-      <HeroContainer>
-      <Hero
-        image = {image}
-        title = {heroTitle}
-        subtitle = {subtitle}
-      />
+      <SideNavigation/>
+      <HeroContainer id='top'>
+        <Hero
+          image = {image}
+          title = {heroTitle}
+          subtitle = {subtitle}
+        />
       </HeroContainer>
-      <Container>
+      <Container id='about'>
+        <PageTitle>Recent Posts</PageTitle>
+        <CardList>
+          {posts.map(({ node: post }) => (
+            <Card
+              key={post.id}
+              slug={post.slug}
+              image={post.heroImage}
+              title={post.title}
+              date={post.publishDate}
+              excerpt={post.body}
+            />
+          ))}
+        </CardList>
+      </Container>
+      <Container id='blog'>
         <PageTitle>Recent Posts</PageTitle>
         <CardList>
           {posts.map(({ node: post }) => (

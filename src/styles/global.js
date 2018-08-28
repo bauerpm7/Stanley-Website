@@ -80,7 +80,7 @@ injectGlobal`
   }
 
   body {
-    background: white;
+    background-color: #f3f3f3;
     line-height: 1;
     font-size: 100%;
     font-variant-ligatures: none;

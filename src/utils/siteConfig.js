@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'GCN',
+  siteTitle: 'Stanley Lowe',
   siteTitleAlt: 'GCN Gatsby Starter', // This allows an alternative site title for SEO schema.
   publisher: 'Publisher named GCN', // Organization name used for SEO schema
   siteDescription:
@@ -15,5 +15,5 @@ module.exports = {
   siteLogo: '/logos/logo-512.png', // Logo used for SEO, RSS, and App manifest
   backgroundColor: '#e9e9e9', // Used for Offline Manifest
   themeColor: '#121212', // Used for Offline Manifest
-  copyright: 'Copyright © 2018 GCN User', // Copyright string for the RSS feed
+  copyright: 'Copyright © 2018 Stanley Lowe', // Copyright string for the RSS feed
 }

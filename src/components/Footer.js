@@ -58,21 +58,17 @@ const Footer = () => (
         </a>
       </Item>
       <Item>
-        <a
-          href="https://github.com/ryanwiemer/gatsby-starter-gcn"
+        <p>Copyright &copy; Stanley Lowe {new Date().getFullYear()}</p>
+      </Item>
+      <Item>
+        <p>Created by <a
+          href="https://github.com/bauerpm7"
           target="_blank"
           rel="noopener noreferrer"
         >
-          gatsby-starter-gcn
-        </a>{' '}
-        by{' '}
-        <a
-          href="https://github.com/ryanwiemer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @ryanwiemer
+          Michael Bauer
         </a>
+        </p>
       </Item>
     </List>
   </Wrapper>

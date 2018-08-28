@@ -46,7 +46,7 @@ const activeLinkStyle = {
 
 const Menu = () => {
   return (
-    <Header>
+    <Header id='top'>
       <Nav>
         <ul>
           <li>
@@ -55,8 +55,8 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            <Link to="/about/" activeStyle={activeLinkStyle}>
-              About
+            <Link to="#blog" activeStyle={activeLinkStyle}>
+              Blog
             </Link>
           </li>
           <li>
