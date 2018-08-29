@@ -8,7 +8,10 @@ const Wrapper = styled.section`
 `
 
 const Container = props => {
-  return <Wrapper>{props.children}</Wrapper>
+  const { id } = props;
+  return (
+    <Wrapper id = {id} >{props.children}</Wrapper>
+  )
 }
 
 export default Container

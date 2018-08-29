@@ -7,6 +7,7 @@ const SectionLink = styled.a`
   border-radius: 100%;
   margin-bottom: 10px;
   display: block;
+  cursor: pointer;
 `
 const InnerLink = styled.span`
   border-radius: 100%;
@@ -17,11 +18,10 @@ const InnerLink = styled.span`
   cursor: pointer;
   background-color: rgba(0,0,0,0.2);
 `
-
 const SideNavBtn = (props) => {
-  const { to, activeStyle } = props
+  const { to, className } = props
   return(
-    <SectionLink href={to} style = {activeStyle}>
+    <SectionLink href={to} className={className} >
       <InnerLink/>
     </SectionLink>
   )  

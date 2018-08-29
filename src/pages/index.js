@@ -17,14 +17,14 @@ const Index = ({ data }) => {
     <div>
       <SEO />
       <SideNavigation/>
-      <HeroContainer id='top'>
+      <HeroContainer>
         <Hero
           image = {image}
           title = {heroTitle}
           subtitle = {subtitle}
         />
       </HeroContainer>
-      <Container id='about'>
+      <Container id='about' name='about'>
         <PageTitle>Recent Posts</PageTitle>
         <CardList>
           {posts.map(({ node: post }) => (
@@ -39,7 +39,7 @@ const Index = ({ data }) => {
           ))}
         </CardList>
       </Container>
-      <Container id='blog'>
+      <Container id='blog' name='blog'>
         <PageTitle>Recent Posts</PageTitle>
         <CardList>
           {posts.map(({ node: post }) => (

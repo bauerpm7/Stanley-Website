@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import Scrollchor from 'react-scrollchor'
 
 const Header = styled.header`
   background: ${props => props.theme.colors.base};
@@ -46,7 +47,7 @@ const activeLinkStyle = {
 
 const Menu = () => {
   return (
-    <Header id='top'>
+    <Header id='top' name='top'>
       <Nav>
         <ul>
           <li>
@@ -55,7 +56,7 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            <Link to="#blog" activeStyle={activeLinkStyle}>
+            <Link to="/blog" activeStyle={activeLinkStyle}>
               Blog
             </Link>
           </li>
