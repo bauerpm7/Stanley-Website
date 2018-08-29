@@ -3,10 +3,10 @@ import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
-import ContactForm from '../components/ContactForm'
 import SEO from '../components/SEO'
+import Video from '../components/Video'
 
-const Contact = ({ data }) => {
+const Videos = ({ data }) => {
   const postNode = {
     title: `Videos - ${config.siteTitle}`,
   }
@@ -20,9 +20,10 @@ const Contact = ({ data }) => {
 
       <Container>
         <PageTitle>Videos</PageTitle>
+        <Video/>
       </Container>
     </div>
   )
 }
 
-export default Contact
+export default Videos

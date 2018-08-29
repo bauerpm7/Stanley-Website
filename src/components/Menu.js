@@ -56,7 +56,7 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            <Link to="/video" activeStyle={activeLinkStyle}>
+            <Link to="/videos" activeStyle={activeLinkStyle}>
               Videos
             </Link>
           </li>

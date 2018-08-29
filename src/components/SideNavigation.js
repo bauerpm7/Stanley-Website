@@ -10,7 +10,6 @@ const BtnContainer = styled.div`
   height: auto;
   z-index: 100;
   display: block;
-
 `
 
 const NavBtn = styled(Scrollchor)`
