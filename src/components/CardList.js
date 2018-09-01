@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const List = styled.ul`
   display: flex;
@@ -13,10 +13,10 @@ const List = styled.ul`
     flex-direction: column;
     align-items: center;
   }
-`
+`;
 
 const CardList = props => {
-  return <List>{props.children}</List>
-}
+  return <List>{props.children}</List>;
+};
 
-export default CardList
+export default CardList;

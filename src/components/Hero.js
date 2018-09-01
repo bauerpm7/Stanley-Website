@@ -1,11 +1,11 @@
-import React from 'react'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
+import React from 'react';
+import Img from 'gatsby-image';
+import styled from 'styled-components';
 
 const Wrapper = styled.section`
   position: relative;
   min-height: 300px;
-`
+`;
 const BgImg = styled(Img)`
   position: absolute;
   top: 0;
@@ -33,7 +33,7 @@ const BgImg = styled(Img)`
     width: 100%;
     z-index: 1;
   }
-`
+`;
 
 const Title = styled.h1`
   font-size: 3em;
@@ -51,7 +51,7 @@ const Title = styled.h1`
   @media (max-width: 600px) {
     font-size: 2em;
   }
-`
+`;
 const SubTitle = styled.h2`
   font-size: 2em;
   text-transform: capitalize;
@@ -68,7 +68,7 @@ const SubTitle = styled.h2`
   @media (max-width: 600px) {
     font-size: 1.3em;
   }
-`
+`;
 
 const Hero = props => (
   <Wrapper>
@@ -80,6 +80,6 @@ const Hero = props => (
     <Title>{props.title}</Title>
     <SubTitle>{props.subtitle}</SubTitle>
   </Wrapper>
-)
+);
 
-export default Hero
+export default Hero;

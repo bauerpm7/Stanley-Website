@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Title = styled.h1`
   font-size: ${props => (props.small ? '2em' : '3em')};
@@ -20,10 +20,10 @@ const Title = styled.h1`
       color: ${props => props.theme.colors.highlight};
     }
   }
-`
+`;
 
 const PageTitle = props => {
-  return <Title small={props.small}>{props.children}</Title>
-}
+  return <Title small={props.small}>{props.children}</Title>;
+};
 
-export default PageTitle
+export default PageTitle;

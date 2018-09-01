@@ -1,30 +1,26 @@
-import React from 'react'
-import CardList from '../components/CardList'
-import Card from '../components/Card'
-import Container from '../components/Container'
-import SEO from '../components/SEO'
-import Hero from '../components/Hero'
-import HeroContainer from '../components/HeroContainer'
-import PageTitle from '../components/PageTitle'
-import SideNavigation from '../components/SideNavigation'
+import React from 'react';
+import CardList from '../components/CardList';
+import Card from '../components/Card';
+import Container from '../components/Container';
+import SEO from '../components/SEO';
+import Hero from '../components/Hero';
+import HeroContainer from '../components/HeroContainer';
+import PageTitle from '../components/PageTitle';
+import SideNavigation from '../components/SideNavigation';
 
 const Index = ({ data }) => {
-  const posts = data.allContentfulPost.edges
-  const image = data.contentfulCoverImage.image
-  const heroTitle = data.contentfulCoverImage.title
-  const subtitle = data.contentfulCoverImage.subtitle
+  const posts = data.allContentfulPost.edges;
+  const image = data.contentfulCoverImage.image;
+  const heroTitle = data.contentfulCoverImage.title;
+  const subtitle = data.contentfulCoverImage.subtitle;
   return (
     <div>
       <SEO />
-      <SideNavigation/>
+      <SideNavigation />
       <HeroContainer>
-        <Hero
-          image = {image}
-          title = {heroTitle}
-          subtitle = {subtitle}
-        />
+        <Hero image={image} title={heroTitle} subtitle={subtitle} />
       </HeroContainer>
-      <Container id='about' name='about'>
+      <Container id="about" name="about">
         <PageTitle>Recent Posts</PageTitle>
         <CardList>
           {posts.map(({ node: post }) => (
@@ -39,7 +35,7 @@ const Index = ({ data }) => {
           ))}
         </CardList>
       </Container>
-      <Container id='blog' name='blog'>
+      <Container id="blog" name="blog">
         <PageTitle>Recent Posts</PageTitle>
         <CardList>
           {posts.map(({ node: post }) => (
@@ -55,15 +51,12 @@ const Index = ({ data }) => {
         </CardList>
       </Container>
     </div>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query indexQuery {
-    allContentfulPost(
-      limit: 3
-      sort: { fields: [publishDate], order: DESC }
-    ) {
+    allContentfulPost(limit: 3, sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
           title
@@ -96,6 +89,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default Index
+export default Index;
