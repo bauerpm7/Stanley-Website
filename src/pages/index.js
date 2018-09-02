@@ -7,9 +7,12 @@ import Hero from '../components/Hero';
 import HeroContainer from '../components/HeroContainer';
 import PageTitle from '../components/PageTitle';
 import SideNavigation from '../components/SideNavigation';
+import Video from '../components/Video';
+import VideoList from '../components/VideoList';
 
 const Index = ({ data }) => {
   const posts = data.allContentfulPost.edges;
+  const video = data.allContentfulVideo.edges[1].node;
   const image = data.contentfulCoverImage.image;
   const heroTitle = data.contentfulCoverImage.title;
   const subtitle = data.contentfulCoverImage.subtitle;
@@ -20,22 +23,17 @@ const Index = ({ data }) => {
       <HeroContainer>
         <Hero image={image} title={heroTitle} subtitle={subtitle} />
       </HeroContainer>
-      <Container id="about" name="about">
-        <PageTitle>Recent Posts</PageTitle>
-        <CardList>
-          {posts.map(({ node: post }) => (
-            <Card
-              key={post.id}
-              slug={post.slug}
-              image={post.heroImage}
-              title={post.title}
-              date={post.publishDate}
-              excerpt={post.body}
+      <Container>
+        <VideoList>
+            <Video
+              key={video.id}
+              title={video.title}
+              url={video.url}
+              description={video.description}
             />
-          ))}
-        </CardList>
+        </VideoList>
       </Container>
-      <Container id="blog" name="blog">
+      <Container id="about" name="about">
         <PageTitle>Recent Posts</PageTitle>
         <CardList>
           {posts.map(({ node: post }) => (
@@ -73,6 +71,20 @@ export const query = graphql`
             childMarkdownRemark {
               html
               excerpt(pruneLength: 80)
+            }
+          }
+        }
+      }
+    }
+    allContentfulVideo {
+      edges {
+        node {
+          title
+          id
+          url
+          description {
+            childMarkdownRemark {
+              html
             }
           }
         }
