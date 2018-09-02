@@ -1,12 +1,12 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
+import React from 'react';
+import Link from 'gatsby-link';
+import styled from 'styled-components';
 
 const Header = styled.header`
   background: ${props => props.theme.colors.base};
   width: 100%;
   padding: 1.5em 0;
-`
+`;
 const Nav = styled.nav`
   width: 100%;
   max-width: ${props => props.theme.sizes.maxWidth};
@@ -38,15 +38,15 @@ const Nav = styled.nav`
       color: white;
     }
   }
-`
+`;
 
 const activeLinkStyle = {
   color: 'white',
-}
+};
 
 const Menu = () => {
   return (
-    <Header>
+    <Header id="top" name="top">
       <Nav>
         <ul>
           <li>
@@ -55,8 +55,8 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            <Link to="/about/" activeStyle={activeLinkStyle}>
-              About
+            <Link to="/videos" activeStyle={activeLinkStyle}>
+              Videos
             </Link>
           </li>
           <li>
@@ -67,7 +67,7 @@ const Menu = () => {
         </ul>
       </Nav>
     </Header>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

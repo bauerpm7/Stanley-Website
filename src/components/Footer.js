@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.footer`
   display: flex;
@@ -8,7 +8,7 @@ const Wrapper = styled.footer`
   align-items: flex-start;
   margin: 0 auto;
   max-width: ${props => props.theme.sizes.maxWidth};
-`
+`;
 
 const List = styled.ul`
   display: flex;
@@ -19,7 +19,7 @@ const List = styled.ul`
   border-top: 1px solid ${props => props.theme.colors.secondary};
   padding: 1em 0 2em;
   margin: 0 1.5em;
-`
+`;
 
 const Item = styled.li`
   display: inline-block;
@@ -39,7 +39,7 @@ const Item = styled.li`
       color: ${props => props.theme.colors.base};
     }
   }
-`
+`;
 
 const Footer = () => (
   <Wrapper>
@@ -58,24 +58,22 @@ const Footer = () => (
         </a>
       </Item>
       <Item>
-        <a
-          href="https://github.com/ryanwiemer/gatsby-starter-gcn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          gatsby-starter-gcn
-        </a>{' '}
-        by{' '}
-        <a
-          href="https://github.com/ryanwiemer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @ryanwiemer
-        </a>
+        <p>Copyright &copy; Stanley Lowe {new Date().getFullYear()}</p>
+      </Item>
+      <Item>
+        <p>
+          Created by{' '}
+          <a
+            href="https://github.com/bauerpm7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Michael Bauer
+          </a>
+        </p>
       </Item>
     </List>
   </Wrapper>
-)
+);
 
-export default Footer
+export default Footer;
