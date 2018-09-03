@@ -3,8 +3,6 @@ import CardList from '../components/CardList';
 import Card from '../components/Card';
 import Container from '../components/Container';
 import SEO from '../components/SEO';
-import Hero from '../components/Hero';
-import HeroContainer from '../components/HeroContainer';
 import PageTitle from '../components/PageTitle';
 import SideNavigation from '../components/SideNavigation';
 import Video from '../components/Video';
@@ -13,24 +11,18 @@ import VideoList from '../components/VideoList';
 const Index = ({ data }) => {
   const posts = data.allContentfulPost.edges;
   const video = data.allContentfulVideo.edges[1].node;
-  const image = data.contentfulCoverImage.image;
-  const heroTitle = data.contentfulCoverImage.title;
-  const subtitle = data.contentfulCoverImage.subtitle;
   return (
-    <div>
+    <div style={{backgroundColor: 'white'}}>
       <SEO />
       <SideNavigation />
-      <HeroContainer>
-        <Hero image={image} title={heroTitle} subtitle={subtitle} />
-      </HeroContainer>
       <Container>
         <VideoList>
-            <Video
-              key={video.id}
-              title={video.title}
-              url={video.url}
-              description={video.description}
-            />
+          <Video
+            key={video.id}
+            title={video.title}
+            url={video.url}
+            description={video.description}
+          />
         </VideoList>
       </Container>
       <Container id="about" name="about">
@@ -87,16 +79,6 @@ export const query = graphql`
               html
             }
           }
-        }
-      }
-    }
-    contentfulCoverImage {
-      title
-      subtitle
-      image {
-        sizes {
-          aspectRatio
-          srcSet
         }
       }
     }

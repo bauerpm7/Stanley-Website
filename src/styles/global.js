@@ -1,4 +1,4 @@
-import { injectGlobal } from 'styled-components'
+import { injectGlobal } from 'styled-components';
 
 injectGlobal`
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -80,7 +80,6 @@ injectGlobal`
   }
 
   body {
-    background-color: #f3f3f3;
     line-height: 1;
     font-size: 100%;
     font-variant-ligatures: none;
@@ -95,4 +94,4 @@ injectGlobal`
   	width: 100%;
   	height: auto;
   }
-`
+`;
