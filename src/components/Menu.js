@@ -60,7 +60,7 @@ const SubTitle = styled.h3`
   text-transform: uppercase;
   @media (max-width: 800px) {
     font-size: 0.9em;
-    padding: 0 30px
+    padding: 0 30px;
   }
 `;
 
