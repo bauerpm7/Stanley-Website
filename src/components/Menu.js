@@ -41,15 +41,27 @@ const Logo = styled.img`
 const Title = styled.h1`
   font-size: 4em;
   margin-top: 80px;
+  text-align: center;
   color: ${props => props.theme.colors.base};
   text-transform: uppercase;
+  @media (max-width: 800px) {
+    font-size: 3em;
+  }
+  @media (max-width: 500px) {
+    font-size: 2em;
+  }
 `;
 
 const SubTitle = styled.h3`
   font-size: 1.1em;
+  text-align: center;
   letter-spacing: -0.15px;
   margin-bottom: 50px;
   text-transform: uppercase;
+  @media (max-width: 800px) {
+    font-size: 0.9em;
+    padding: 0 30px
+  }
 `;
 
 const Nav = styled.nav`

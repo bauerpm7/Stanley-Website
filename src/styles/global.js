@@ -24,6 +24,7 @@ injectGlobal`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    background-color: 'white';
   }
 
   /* Added to Fix Footer to bottom of viewport */

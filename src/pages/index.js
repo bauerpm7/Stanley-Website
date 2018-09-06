@@ -7,14 +7,29 @@ import PageTitle from '../components/PageTitle';
 import SideNavigation from '../components/SideNavigation';
 import Video from '../components/Video';
 import VideoList from '../components/VideoList';
+import AccomplishmentCard from '../components/accomplishmentCard';
 
 const Index = ({ data }) => {
   const posts = data.allContentfulPost.edges;
   const video = data.allContentfulVideo.edges[1].node;
+  const accomplishments = data.allContentfulAccomplishmentsAndAwards.edges;
   return (
-    <div style={{backgroundColor: 'white'}}>
+    <div style={{ backgroundColor: 'white' }}>
       <SEO />
       <SideNavigation />
+      <Container>
+        <CardList>
+          {accomplishments.map(({ node: post }) => (
+            <AccomplishmentCard
+              key={post.id}
+              image={post.heroImage}
+              title={post.title}
+              body={post.bodyText}
+              url={post.url}
+            />
+          ))}
+        </CardList>
+      </Container>
       <Container>
         <VideoList>
           <Video
@@ -82,6 +97,27 @@ export const query = graphql`
         }
       }
     }
+    
+      allContentfulAccomplishmentsAndAwards {
+        edges {
+          node {
+            id
+            heroImage {
+              sizes {
+                srcSet
+                aspectRatio
+              }
+            }
+            bodyText {
+              childMarkdownRemark {
+                html
+              }
+            }
+            url
+          }
+        }
+      }
+    
   }
 `;
 
