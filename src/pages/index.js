@@ -97,28 +97,24 @@ export const query = graphql`
         }
       }
     }
-    
-      allContentfulAccomplishmentsAndAwards {
-        edges {
-          node {
-            id
-            title
-            heroImage {
-              sizes {
-                srcSet
-                aspectRatio
-              }
+    allContentfulAccomplishmentsAndAwards {
+      edges {
+        node {
+          id
+          title
+          heroImage {
+            sizes {
+              srcSet
+              aspectRatio
             }
-            bodyText {
-              childMarkdownRemark {
-                html
-              }
-            }
-            url
           }
+          bodyText {
+            bodyText
+          }
+          url
         }
       }
-    
+    }
   }
 `;
 

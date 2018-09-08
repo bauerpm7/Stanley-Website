@@ -59,11 +59,7 @@ const AccomplishmentCard = props => {
     <Post>
       <Img sizes={props.image.sizes} backgroundColor={'#eeeeee'} />
       <Title>{props.title}</Title>
-      <Body
-        dangerouslySetInnerHTML={{
-          __html: props.body.childMarkdownRemark.html,
-        }}
-      />
+      <Body>{props.body.bodyText}</Body>
       <StyledLink style={{ color: '#0A548C'}} href={props.url}>Find Out More</StyledLink>
     </Post>
   );
