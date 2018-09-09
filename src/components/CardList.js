@@ -4,11 +4,8 @@ import styled from 'styled-components';
 const List = styled.ul`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  &::after {
-    content: '';
-    flex: 0 0 32%;
-  }
+  justify-content: space-around;
+  
   @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;

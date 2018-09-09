@@ -14,10 +14,10 @@ const Index = ({ data }) => {
   const video = data.allContentfulVideo.edges[1].node;
   const accomplishments = data.allContentfulAccomplishmentsAndAwards.edges;
   return (
-    <div style={{ backgroundColor: 'white' }}>
+    <div style={{ backgroundColor: '#f8f8f8' }}>
       <SEO />
       <SideNavigation />
-      <Container>
+      <Container id="accomplishments">
         <CardList>
           {accomplishments.map(({ node: post }) => (
             <AccomplishmentCard
@@ -30,7 +30,7 @@ const Index = ({ data }) => {
           ))}
         </CardList>
       </Container>
-      <Container>
+      <Container id="video">
         <VideoList>
           <Video
             key={video.id}
@@ -40,7 +40,7 @@ const Index = ({ data }) => {
           />
         </VideoList>
       </Container>
-      <Container id="about" name="about">
+      <Container id="blog" name="about">
         <PageTitle>Recent Posts</PageTitle>
         <CardList>
           {posts.map(({ node: post }) => (

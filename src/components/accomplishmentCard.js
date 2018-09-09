@@ -5,6 +5,7 @@ import Img from 'gatsby-image';
 const Post = styled.li`
   border: 1px solid ${props => props.theme.colors.secondary};
   border-radius: 2px;
+  background: white;
   margin: 0 0 1em 0;
   width: 100%;
   height: 100%;
@@ -17,13 +18,11 @@ const Post = styled.li`
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     flex: 0 0 32%;
   }
-  &:hover {
-    background: ${props => props.theme.colors.tertiary};
-  }
+
   a {
     display: flex;
     flex-flow: column;
-    
+
     width: 100%;
     color: ${props => props.theme.colors.base};
     text-decoration: none;
@@ -48,10 +47,10 @@ const Body = styled.p`
 `;
 
 const StyledLink = styled.a`
-margin: 0 1rem 1rem 1rem;
-line-height: 1.6;
-text-align: justify;
-font-weight: 600
+  margin: 0 1rem 1rem 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  font-weight: 600;
 `;
 
 const AccomplishmentCard = props => {
@@ -60,7 +59,9 @@ const AccomplishmentCard = props => {
       <Img sizes={props.image.sizes} backgroundColor={'#eeeeee'} />
       <Title>{props.title}</Title>
       <Body>{props.body.bodyText}</Body>
-      <StyledLink style={{ color: '#0A548C'}} href={props.url}>Find Out More</StyledLink>
+      <StyledLink style={{ color: '#0A548C' }} href={props.url}>
+        Find Out More
+      </StyledLink>
     </Post>
   );
 };

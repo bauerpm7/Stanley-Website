@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Scrollchor from 'react-scrollchor';
-const BtnContainer = styled.div`
+const MenuContainer = styled.div`
   position: fixed;
   right: 30px;
   top: 300px;
@@ -32,19 +32,23 @@ const BtnBG = styled.span`
   background-color: rgba(0, 0, 0, 0.2);
 `;
 
+
 const SideNavigation = () => {
   return (
-    <BtnContainer>
-      <NavBtn to="#top">
+    <MenuContainer>
+      <NavBtn className= {top} to="#top">
         <BtnBG />
       </NavBtn>
-      <NavBtn to="#about">
+      <NavBtn to="#accomplishments">
+        <BtnBG />
+      </NavBtn>
+      <NavBtn to="#video">
         <BtnBG />
       </NavBtn>
       <NavBtn to="#blog">
         <BtnBG />
       </NavBtn>
-    </BtnContainer>
+    </MenuContainer>
   );
 };
 

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import StanLogo from '../images/Stan-Lowe-Logo.png';
 
 const Header = styled.header`
-  background-color: white;
+  background-color: #f8f8f8;
   width: 100%;
   padding: 1.5em 0;
   height: 300px;
@@ -24,7 +24,7 @@ const LogoContainer = styled.div`
 `;
 
 const LogoLink = styled(Link)`
-  background-color: white;
+  background-color: #f8f8f8;
   display: inline-block;
   position: relative;
   line-height: 1.1;
@@ -36,6 +36,7 @@ const LogoLink = styled(Link)`
 const Logo = styled.img`
   height: 80px;
   width: 80px;
+  background-color: transparent;
 `;
 
 const Title = styled.h1`

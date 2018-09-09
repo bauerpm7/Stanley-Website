@@ -6,6 +6,7 @@ import Img from 'gatsby-image';
 const Post = styled.li`
   border: 1px solid ${props => props.theme.colors.secondary};
   border-radius: 2px;
+  background: #fff;
   margin: 0 0 1em 0;
   width: 100%;
   max-width: 500px;
@@ -54,8 +55,8 @@ const Excerpt = styled.p`
 const Card = props => {
   return (
     <Post>
-      <Link to={`/${props.slug}/`}>
-        <Img sizes={props.image.sizes} backgroundColor={'#eeeeee'} />
+      <Link style={{backgroundColor: '#fff'}} to={`/${props.slug}/`}>
+        <Img sizes={props.image.sizes} />
         <Title>{props.title}</Title>
         <Date>{props.date}</Date>
         <Excerpt
