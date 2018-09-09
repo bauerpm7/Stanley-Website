@@ -14,7 +14,7 @@ const Videos = ({ data }) => {
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: '#f8f8f8' }}>
       <Helmet>
         <title>{`Videos - ${config.siteTitle}`}</title>
       </Helmet>

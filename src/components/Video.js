@@ -14,7 +14,7 @@ const StyledP = styled.p`
 `;
 const Video = props => {
   return (
-    <div>
+    <div style={{ backgroundColor: '#f8f8f8' }}>
       <PageTitle small>{props.title}</PageTitle>
       <Container>
         <div
