@@ -36,7 +36,7 @@ const BtnBG = styled.span`
 const SideNavigation = () => {
   return (
     <MenuContainer>
-      <NavBtn className= {top} to="#top">
+      <NavBtn to="#top">
         <BtnBG />
       </NavBtn>
       <NavBtn to="#accomplishments">
