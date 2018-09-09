@@ -12,7 +12,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: '#f8f8f8' }}>
       <Helmet>
         <title>{`Contact - ${config.siteTitle}`}</title>
       </Helmet>

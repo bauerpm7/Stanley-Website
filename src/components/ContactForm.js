@@ -20,9 +20,9 @@ const Form = styled.form`
   textarea {
     font-family: inherit;
     font-size: inherit;
-    border: none;
+    border: 0.5px solid #ccc;
     outline: none;
-    background: ${props => props.theme.colors.tertiary};
+    background: white;
     color: ${props => props.theme.colors.base};
     border-radius: 2px;
     padding: 1em;
